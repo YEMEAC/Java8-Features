@@ -27,7 +27,7 @@ public class Stream {
         System.out.println("");
 
 
-        //Sort stream
+        //Sort stream of 10 random ints
         Random random = new Random();
         random.ints().limit(10).sorted().forEach(System.out::println);
 
