@@ -7,19 +7,18 @@ import java.util.stream.Collectors;
 /**
  * @author Yeison Melo {@literal <mailto:melo.yeison@gmail.com/>}
  *         Class to study Java 8 new features
+ *
  */
 
 public class Stream {
 
     public static void main(String[] args) {
 
-
         List<String> strings = Arrays.asList("A", "B", "C", "D", "E","", "F", "G");
 
         //Parallel processing of collections to use multicore systems but doesn't warranty orden
         strings.parallelStream().map(n -> n + " ").forEach(System.out::print);
         System.out.println("");
-
 
         //Map, Collectors and for each stream
         List<Integer> integers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15);
