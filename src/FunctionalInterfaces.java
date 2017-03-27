@@ -36,7 +36,6 @@ public class FunctionalInterfaces {
 
     }
 
-
     /**
      * Functional interface, interface with only one method
      */
