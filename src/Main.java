@@ -15,31 +15,29 @@ import java.util.Random;
  * in input parameters of methods
  * in constructor parameters
  */
-public class OptionalClass {
+public class Main {
 
     public static void main(String[] args) {
 
-        Integer a = 12;
-        Integer b = 2;
 
-        if (OptionalClass.getValue().isPresent()) {
-            System.out.println("Value is present: present");
+        if (Main.getNumber().isPresent()) {
+            System.out.println("Value is present");
         } else {
-            System.out.println("Value is not present: present");
+            System.out.println("Value is not present");
         }
     }
 
     /**
      * Very useful when the function may return a value or not
      */
-    private static Optional<Integer> getValue() {
-        Optional<Integer> result = null;
+    private static Optional<Integer> getNumber() {
+        Optional<Integer> result = Optional.empty();
 
         Random random = new Random();
         if (random.ints().limit(1).toArray()[0] % 2 == 0) {
             result = Optional.of(5);
         }
 
-        return result.empty();
+        return result;
     }
 }

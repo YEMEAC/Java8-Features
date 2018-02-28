@@ -29,7 +29,6 @@ public class FunctionalInterfaces {
         System.out.println(func.apply(10,20L));
 
         //Predicate<T> Represents a predicate (Boolean-valued function) of one argument.
-        //Call function with interface implementation as parameter
         List<Integer> places = Arrays.asList(1,2,3,4,5,6);
         eval(places, i -> i%2==0);
        
@@ -44,14 +43,14 @@ public class FunctionalInterfaces {
     }
 
     /**
-     * Aux method to avoid calls to operation for every implementation of MathOperation
+     * Aux method to avoid calls to .operation for every implementation of MathOperation
      */
     private static int operate(int a, int b, MathOperation mathOperation) {
         return mathOperation.operation(a, b);
     }
 
     /**
-     * Function with a function as parameter
+     * Function with a "function" as parameter
      */
     private static void eval(List<Integer> l, Predicate<Integer> predicate){
         for(Integer i: l){
